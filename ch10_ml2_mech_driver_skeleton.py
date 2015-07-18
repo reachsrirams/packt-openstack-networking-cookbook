@@ -12,16 +12,16 @@ class CookbookMechanismDriver(api.MechanismDriver):
     def initialize(self):
         driver_logger.error("Inside Mech Driver Initialize")
 
-    def create_network_precommit(self, context):
-        pass
-
     def create_network_postcommit(self, context):
         pass
 	
+    def update_network_postcommit(self, context):
+        pass
+
     def update_network_precommit(self, context):
         pass
 
-    def update_network_postcommit(self, context):
+    def update_network_precommit(self, context):
         pass
 
     def delete_network_precommit(self, context):
