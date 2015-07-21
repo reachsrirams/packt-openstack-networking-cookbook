@@ -7,14 +7,11 @@ from neutron.plugins.ml2 import driver_api as api
 driver_logger = logger.getLogger(__name__)
 
 
-class CookbookMechanismDriver(api.MechanismDriver):
-
-    def initialize(self):
-        driver_logger.error("Inside Mech Driver Initialize")
+class CookbookPortMechanismDriver(api.MechanismDriver):
 
     def _log_port_information(self, method_name, context):
         driver_logger.info("**** %s ****" % (method_name))
-        # Extract the current Port context 
+        # Extract the current Port context
         current_port_context = context.current
         # Extract the associated Network Context
         network_context = context.network

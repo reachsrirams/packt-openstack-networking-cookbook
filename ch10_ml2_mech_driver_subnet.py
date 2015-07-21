@@ -13,10 +13,7 @@ from neutron.plugins.ml2 import db as ml2_db
 driver_logger = logger.getLogger(__name__)
 
 
-class CookbookMechanismDriver(api.MechanismDriver):
-
-    def initialize(self):
-        driver_logger.error("Inside Mech Driver Initialize")
+class CookbookSubnetMechanismDriver(api.MechanismDriver):
 
     def _log_subnet_information(self, method_name, current_context, prev_context):
         driver_logger.info("**** %s ****" % (method_name))
