@@ -6,12 +6,10 @@ except ImportError:
     from oslo_log import log as logger
 from neutron.plugins.ml2 import driver_api as api
 
-import ch10_ml2_mech_driver_skeleton as cookbook_skeleton_driver
-
 driver_logger = logger.getLogger(__name__)
 
 
-class CookbookMechanismDriver(cookbook_network_driver.CookbookSkeletonMechanismDriver):
+class CookbookMechanismDriver(api.MechanismDriver):
 
     def initialize(self):
         driver_logger.error("Inside Mech Driver Initialize")
