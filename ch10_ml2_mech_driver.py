@@ -11,7 +11,7 @@ import ch10_ml2_mech_driver_skeleton as cookbook_skeleton_driver
 driver_logger = logger.getLogger(__name__)
 
 
-class CookbookMechanismDriver(cookbook_network_driver.CookbookSkeletonMechanismDriver)
+class CookbookMechanismDriver(cookbook_network_driver.CookbookSkeletonMechanismDriver):
 
     def initialize(self):
         driver_logger.error("Inside Mech Driver Initialize")
