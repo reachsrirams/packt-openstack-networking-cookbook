@@ -7,10 +7,7 @@ from neutron.plugins.ml2 import driver_api as api
 driver_logger = logger.getLogger(__name__)
 
 
-class CookbookMechanismDriver(api.MechanismDriver):
-
-    def initialize(self):
-        driver_logger.error("Inside Mech Driver Initialize")
+class CookbookSkeletonMechanismDriver(api.MechanismDriver):
 
     def create_network_postcommit(self, context):
         pass
