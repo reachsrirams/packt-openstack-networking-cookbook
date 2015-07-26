@@ -12,5 +12,5 @@ driver_logger = logger.getLogger(__name__)
 class CookbookMechanismDriver(api.MechanismDriver):
 
     def initialize(self):
-        driver_logger.error("Inside Mech Driver Initialize")
+        driver_logger.info("Inside Mech Driver Initialize")
 
