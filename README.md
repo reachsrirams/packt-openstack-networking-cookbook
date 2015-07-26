@@ -10,3 +10,4 @@
 3. ch10_ml2_mech_driver_subnet.py - this file contains Subnet related mechanism driver methods
 4. ch10_ml2_mech_driver_port.py - this file contains Port related mechanism driver methods 
 5. ch10_ml2_mech_driver_final.py - This file represents the final mechanism driver that includes Network, Subnet and Port driver methods.
+6. local.conf - The conf file can be used in your DevStack setup
