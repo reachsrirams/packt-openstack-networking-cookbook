@@ -1,0 +1,39 @@
+heat_template_version: 2013-05-23
+
+description: >
+  Heat template to create a new neutron network, a router and adding the network to the router. 
+
+parameters:
+  My_net1_name:
+    type: string
+    description: Name of the network to be created
+  My_net1_cidr:
+    type: string
+    description: Network address (CIDR notation)
+
+
+resources:
+  Chapter12_net1:
+    type: OS::Neutron::Net
+    properties:
+      name: { get_param: My_net1_name }
+
+  Chapter12_subnet1:
+    type: OS::Neutron::Subnet
+    properties:
+      network_id: { get_resource: Chapter12_net1 }
+      cidr: { get_param: My_net1_cidr }
+
+  Chapter12_router:
+    type: OS::Neutron::Router
+
+  Chapter12_router_interface:
+    type: OS::Neutron::RouterInterface
+    properties:
+      router_id: { get_resource: Chapter12_router }
+      subnet_id: { get_resource: Chapter12_subnet1 }
+
+
+outputs:
+
+
